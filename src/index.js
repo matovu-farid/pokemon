@@ -1,4 +1,4 @@
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import './style.css';
-import './display_list_items'
+import './display_list_items';
