@@ -23,6 +23,28 @@ li {
   padding-right: 10px;
 }
 
+#display-items {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-gap: 10px;
+
+}
+
+#display-items li {
+  display: flex;
+  flex-direction: column;
+}
+
+#display-items img {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+#display-items button {
+  width: 100px;
+}
+
+
 @media (min-width: 750px) {
   header {
     display: flex;
