@@ -8,6 +8,45 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.menu {
+  display: none;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+li {
+  padding-right: 10px;
+}
+
+@media (min-width: 750px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu {
+    display: inherit;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
 }
 footer {
   text-indent: 20px;
