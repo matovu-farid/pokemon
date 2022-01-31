@@ -1,4 +1,5 @@
-import {test} from '@jest/globals'
-test('test',()=>{
-    console.log('test')
-})
+import { test } from '@jest/globals';
+
+test('test', () => {
+  console.log('test');
+});

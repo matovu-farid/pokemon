@@ -4,7 +4,7 @@
   "description": "A website showing pokemon characters",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage",
+    "test": "jest ",
     "style": "stylelint \"**/*.{css,scss}\" --fix",
     "hint": "hint .",
     "lint": "eslint . --fix",
@@ -47,6 +47,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "@fortawesome/fontawesome-free": "^5.15.4",
+    "@jest/globals": "^27.4.6",
     "core-js": "^3.20.3",
     "jest-localstorage-mock": "^2.4.18",
     "regenerator-runtime": "^0.13.9"
