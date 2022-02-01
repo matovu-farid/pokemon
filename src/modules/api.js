@@ -38,7 +38,7 @@ export default class Api {
 
   getComments = async (idPokemon) => {
     const response = await fetch(`${this.COMMENT_URL}?item_id=${idPokemon}`);
-    if (response.status && response.status === 500) {
+    if ((response.status && response.status === 500) || response.status === 400) {
       return [];
     }
     const data = await response.json();
