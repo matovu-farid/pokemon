@@ -61,7 +61,8 @@ li {
   padding: 0;
 }
 
-.pokemon-characteristics {
+.pokemon-characteristics,
+.pokemon-comments {
   display: flex;
   flex-direction: column;
 }
