@@ -7,3 +7,5 @@ export const popupInit = () => {
     });
   });
 };
+
+export default popupInit;
