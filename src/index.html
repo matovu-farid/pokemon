@@ -6,30 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body >
-    <main class="centered-column">
-      <header>
-        <img class="logo" src="image_link" alt="Logo" />
-        <div>
-          <span class="mobile-menu">MENU MOBILE</span>
-          <nav class="menu">
-            <ul >
-              <li><a href="index.html">Pokemon</a></li>
-              <li><a href="link2">Link2</a></li>
-              <li><a href="link3">Link3</a></li>
+  <body>
+    <header>
+      <img class="logo" src="image_link" alt="Logo" />
+      <div>
+        <span class="mobile-menu">MENU MOBILE</span>
+        <nav class="menu">
+          <ul>
+            <li><a href="index.html">Pokemon</a></li>
+            <li><a href="link2">Link2</a></li>
+            <li><a href="link3">Link3</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="centered-column">
+        <ul id="display-items"></ul>
+      </section>
+      <!-- POPUP -->
+      <div class="popup-modal popup-hidden">
+        <div class="popup-datas">
+          <div class="popup-close">
+            <img src="close_popup.png" class="close_popup" alt="close popup" />
+          </div>
+          <div class="popup-image">
+            <img class="pokemon-image" id="pokemon_image" src="#" alt="pokemon picture" />
+          </div>
+          <div class="popup-pokemon">
+            <h3 id="pokemon_name">${pokemon_name}</h3>
+            <ul class="pokemon-characteristics">
+              <li>Height : <span id="pokemon_height"></span></li>
+              <li>Weight : <span id="pokemon_weight"></span></li>
             </ul>
-          </nav>
+          </div>
         </div>
-      </header>
+      </div>
+      <!-- END POPUP -->
     </main>
-    <section class="centered-column">
-        <ul id="display-items">
-           
-
-        </ul>
-    </section>
-    <footer >
-        Created by Matovu Farid Nkoba and Jihanne under MIT licence
-    </footer>
+    <footer>Created by Matovu Farid Nkoba and Jihanne under MIT licence</footer>
   </body>
 </html>
