@@ -58,4 +58,20 @@ export default class Api {
     const data = await response.text();
     return data;
   };
+
+  addComment = async (idPokemon, userName, userComment) => {
+    const response = await fetch(`${this.COMMENT_URL}/`, {
+      method: 'POST',
+      body: JSON.stringify({
+        item_id: idPokemon,
+        username: userName,
+        comment: userComment,
+      }),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    });
+    const data = await response.text();
+    return data;
+  };
 }
