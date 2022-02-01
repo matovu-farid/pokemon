@@ -45,6 +45,15 @@ export default class Api {
     return data.error ? [] : data;
   };
 
+  getNbComments = async (idPokemon) => {
+    const response = await fetch(`${this.COMMENT_URL}?item_id=${idPokemon}`);
+    if (response.status && response.status === 500) {
+      return 0;
+    }
+    const data = await response.json();
+    return data.error ? 0 : data.length;
+  };
+
   registerNewApp = async () => {
     const response = await fetch(this.APP_URL, {
       method: 'POST',
