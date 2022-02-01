@@ -32,7 +32,7 @@ export default class Api {
   };
 
   getPokemonFromId = async (idPokemon) => {
-    const data = await this.#fetchPockemon(`${this.POKEMON_URL}/${idPokemon}`);
+    const data = await this.#fetchPockemon(`${this.POKEMON_URL}/${idPokemon}/`);
     return data;
   };
 
