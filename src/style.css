@@ -85,8 +85,4 @@ li {
   .mobile-menu {
     display: none;
   }
-
-  #display-items {
-    /* grid-template-columns: 200px 200px 200px; */
-  }
 }
