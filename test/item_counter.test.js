@@ -1,11 +1,28 @@
 import {
-  jest, expect, it,
+  jest, expect, it, beforeEach,
 } from '@jest/globals';
 import Api from '../src/modules/api.js';
 import 'regenerator-runtime/runtime';
 import { displayItems } from '../src/modules/display_list_items';
 
 jest.mock('../src/modules/api.js');
+
+document.body.innerHTML = `
+<span id="count"></span>
+<section class="centered-column">
+        <ul id="display-items">
+        </ul>
+    </section>
+`;
+beforeEach(() => {
+  document.body.innerHTML = `
+<span id="count"></span>
+<section class="centered-column">
+        <ul id="display-items">
+        </ul>
+    </section>
+`;
+});
 
 it('should mock the api', () => {
   const api = new Api();
@@ -27,18 +44,10 @@ it('should mock the api', () => {
   ]);
 });
 
-document.body.innerHTML = `
-<span id="count"></span>
-<section class="centered-column">
-        <ul id="display-items">
-        </ul>
-    </section>
-`;
-
-it.only('should return three child nodes for the displayList', () => {
-  const api = new Api();
+it('should the value of (3) when displayItems is called', async () => {
+  await displayItems();
   const displayList = document.querySelector('#display-items');
   expect(displayList.children.length).toBe(3);
-  const count = document.querySelector('#count')
-  expect(count.innerHTML).toBe("(3)")
+  const count = document.querySelector('#count');
+  expect(count.innerHTML).toBe('(3)');
 });
