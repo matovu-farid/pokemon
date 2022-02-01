@@ -6,7 +6,7 @@ const displayItems = async () => {
   const api = new Api();
   const displayItems = await api.getDisplayItems();
   displayItems.forEach(appendListItem);
-  popupInit();
+  popupInit(api);
 };
 
 displayItems();
