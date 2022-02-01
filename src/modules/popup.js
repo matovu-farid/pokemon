@@ -13,7 +13,13 @@ export const popupInit = (connector) => {
         selector('#pokemon_weight').innerHTML = pokemon.weight;
 
         const comments = await connector.getComments(idPokemon);
-        comments.forEach(appendCommentItem);
+        if (comments.length > 0) {
+          comments.forEach(appendCommentItem);
+        } else {
+          selector('.pokemon-comments').innerHTML = 'No comment yet.';
+        }
+      } else {
+        selector('.pokemon-comments').innerHTML = '';
       }
       selector('.popup-modal').classList.toggle('popup-hidden');
     });
