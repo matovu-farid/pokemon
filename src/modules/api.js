@@ -11,6 +11,9 @@ export default class Api {
     const data = await (await fetch(url)).json();
     result.url = data.sprites.other.dream_world.front_default;
     result.id = data.id;
+    result.name = data.name;
+    result.height = data.height;
+    result.weight = data.weight;
     return result;
   };
 
