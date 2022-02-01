@@ -14,6 +14,7 @@ export const popupInit = (connector) => {
 
         const comments = await connector.getComments(idPokemon);
         comments.forEach(appendCommentItem);
+        selector('#idPokemon').value = idPokemon;
       }
       selector('.popup-modal').classList.toggle('popup-hidden');
     });
