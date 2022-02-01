@@ -23,4 +23,9 @@ export default class Api {
     const items = await Promise.all(promises);
     return items;
   };
+
+  getPokemonFromId = async (idPokemon) => {
+    const data = await this.#fetchPockemon(`${this.POKEMON_URL}/${idPokemon}`);
+    return data;
+  };
 }
