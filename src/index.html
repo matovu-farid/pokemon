@@ -21,22 +21,23 @@
       </div>
     </header>
     <main>
+      <section class="centered-column">
+        <ul id="display-items"></ul>
+      </section>
       <!-- POPUP -->
-      <div class="popup-open">Open Popup</div>
       <div class="popup-modal popup-hidden">
         <div class="popup-datas">
           <div class="popup-close">
             <img src="close_popup.png" class="close_popup" alt="close popup" />
           </div>
           <div class="popup-image">
-            <img class="pokemon-image" src="#" alt="pokemon picture" />
+            <img class="pokemon-image" id="pokemon_image" src="#" alt="pokemon picture" />
           </div>
           <div class="popup-pokemon">
-            <h3>${pokemon_name}</h3>
+            <h3 id="pokemon_name">${pokemon_name}</h3>
             <ul class="pokemon-characteristics">
-              <li>characteristics 1 : value</li>
-              <li>characteristics 2 : value</li>
-              <li>characteristics 3 : value</li>
+              <li>Height : <span id="pokemon_height"></span></li>
+              <li>Weight : <span id="pokemon_weight"></span></li>
             </ul>
             <h3>Comments</h3>
             <ul class="pokemon-comments">
