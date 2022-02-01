@@ -28,6 +28,7 @@ it('should mock the api', () => {
 });
 
 document.body.innerHTML = `
+<span id="count"></span>
 <section class="centered-column">
         <ul id="display-items">
         </ul>
@@ -36,7 +37,8 @@ document.body.innerHTML = `
 
 it.only('should return three child nodes for the displayList', () => {
   const api = new Api();
-  expect(displayItems(api)).resolves.toBeUndefined();
   const displayList = document.querySelector('#display-items');
   expect(displayList.children.length).toBe(3);
+  const count = document.querySelector('#count')
+  expect(count.innerHTML).toBe("(3)")
 });
