@@ -17,7 +17,6 @@ footer {
   border-top: 2px solid black;
   border-bottom: 2px solid black;
   position: relative;
-  
   bottom: 0;
 }
 
@@ -46,9 +45,7 @@ li {
   display: grid;
   width: 100%;
   max-width: 800px;
-  
   grid-template-columns: repeat(auto-fill, 200px);
-  
   grid-gap: 10px;
   align-items: center;
 }
@@ -68,7 +65,6 @@ li {
 #display-items button {
   width: 100px;
 }
-
 
 @media (min-width: 750px) {
   header {
@@ -93,7 +89,4 @@ li {
   #display-items {
     /* grid-template-columns: 200px 200px 200px; */
   }
-
 }
-
-
