@@ -4,7 +4,7 @@
   "description": "A website showing pokemon characters",
   "main": "index.js",
   "scripts": {
-    "test": "jest ",
+    "test": "jest --env=jsdom",
     "style": "stylelint \"**/*.{css,scss}\" --fix",
     "hint": "hint .",
     "lint": "eslint . --fix",

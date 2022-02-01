@@ -19,7 +19,6 @@ export default class Api {
         promises.push(this.#fetchPockemon(result.url));
       });
       const items = await Promise.all(promises);
-      console.log(items)
       return items;
     }
 }
