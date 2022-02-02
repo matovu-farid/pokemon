@@ -5,7 +5,10 @@ import Api from '../src/modules/api.js';
 import 'regenerator-runtime/runtime';
 import { displayItems } from '../src/modules/display_list_items';
 
+import '../src/modules/append_no_of_likes.js';
+
 jest.mock('../src/modules/api.js');
+jest.mock('../src/modules/append_no_of_likes.js')
 
 describe('The counter', () => {
   document.body.innerHTML = `
