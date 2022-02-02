@@ -9,7 +9,7 @@ selector('form').addEventListener('submit', async (event) => {
   const api = new Api();
   await api.addComment(form.idPokemon.value, form.username.value, form.comment.value);
 
-  let today = new Date();
+  const today = new Date();
 
   appendCommentItem({
     creation_date: `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`,
