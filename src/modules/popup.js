@@ -11,6 +11,7 @@ export const popupInit = (connector) => {
         selector('#pokemon_image').src = pokemon.url;
         selector('#pokemon_height').innerHTML = pokemon.height;
         selector('#pokemon_weight').innerHTML = pokemon.weight;
+        selector('#idPokemon').value = idPokemon;
 
         const comments = await connector.getComments(idPokemon);
         if (comments.length > 0) {
