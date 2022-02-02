@@ -8,5 +8,6 @@ selector('form').addEventListener('submit', async (event) => {
   const api = new Api();
   await api.addComment(form.idPokemon.value, form.username.value, form.comment.value);
   form.reset();
+  selector('.pokemon-comments').innerHTML = '';
   selector('.popup-modal').classList.add('popup-hidden');
 });
