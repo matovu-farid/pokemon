@@ -1,4 +1,3 @@
-import addToggleListener from './addHeartlistener';
 import Api from './api';
 
 const addLikeListener = (heart, id) => {
@@ -12,7 +11,7 @@ const addNewListener = () => {
 
   hearts.forEach((heart) => {
     const id = heart.id.match(/\d+/)[0];
-    addToggleListener(heart, id);
+
     addLikeListener(heart, id);
   });
 };
