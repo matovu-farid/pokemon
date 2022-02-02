@@ -1,4 +1,4 @@
-export default class Api {
+export class Api {
   POKEMON_URL = 'https://pokeapi-215911.firebaseapp.com/api/v2/pokemon';
 
   APP_URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
@@ -102,3 +102,6 @@ export default class Api {
     return data;
   };
 }
+
+const api = new Api();
+export default api;

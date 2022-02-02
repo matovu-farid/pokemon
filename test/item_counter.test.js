@@ -1,7 +1,7 @@
 import {
   jest, expect, it, beforeEach, describe,
 } from '@jest/globals';
-import Api from '../src/modules/api.js';
+import {Api} from '../src/modules/api.js';
 import 'regenerator-runtime/runtime';
 import { displayItems } from '../src/modules/display_list_items';
 
