@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +10,7 @@ body {
   height: 100vh;
   background-color: #302e37;
   color: #c1c7d0;
+  font-family: 'Nanum Gothic', sans-serif;
 }
 
 a {
@@ -43,17 +46,6 @@ button {
   transition: 250ms filter ease-in;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-form input,
-form textarea,
-form button {
-  margin: 5px;
-}
-
 button:hover {
   filter: invert(20%);
 }
@@ -76,8 +68,22 @@ li {
   object-fit: contain;
 }
 
+.date {
+  font-size: smaller;
+  color: antiquewhite;
+}
+
+.username {
+  color: aquamarine;
+  font-weight: bold;
+}
+
 .pokemon-name {
   padding: 5px 0;
+}
+
+.pokemon-characteristics i {
+  font-size: xx-large;
 }
 
 .card {
@@ -86,7 +92,7 @@ li {
   padding: 10px 0;
   transform: scale(1);
   transition: 250ms transform ease-in;
-  animation: slide-in ease-out  3s 1;
+  animation: slide-in ease-out 3s 1;
 }
 
 @keyframes slide-in {
@@ -102,6 +108,8 @@ li {
 .card:hover {
   transform: scale(1.12, 1.1);
 }
+
+/*** POPUP *****/
 
 .pokemon-section {
   margin: 50px;
@@ -119,16 +127,17 @@ li {
   bottom: 0;
   overflow-y: scroll;
   z-index: 999;
-  background-color: #c1c7d0;
+  background: #171618;
+  border-radius: 16px;
+  padding: 30px;
+  padding-top: 10px;
+  color: #fc0;
+  color: white;
 }
 
 .popup-datas {
-  margin: 20px 10px;
-  background-color: #fff;
   display: flex;
   flex-direction: column;
-  padding: 10px;
-  border-radius: 16px;
 }
 
 .popup-pokemon {
@@ -137,7 +146,20 @@ li {
 
 .popup-modal ul {
   list-style: none;
-  padding: 0;
+  height: 201px;
+}
+
+.pokemon-characteristics {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  margin: 26px;
+  color: white;
+  font-size: 20px;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .pokemon-characteristics,
@@ -147,6 +169,10 @@ li {
   justify-content: end;
 }
 
+.pokemon-characteristics li span {
+  margin: 10px;
+}
+
 .popup-image {
   text-align: center;
   margin: 20px 0;
@@ -154,8 +180,84 @@ li {
 }
 
 .popup-image img {
-  width: 50px;
+  max-width: 300px;
 }
+
+h4 {
+  margin: 20px 0 10px 0;
+  text-align: left;
+}
+
+.pokemon-comments {
+  border-radius: 10px;
+  margin: 6px;
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  background: #302e37;
+  height: 100px;
+  overflow: scroll;
+}
+
+.pokemon-comments li {
+  margin: 5px;
+}
+
+.pokemon-characteristics li {
+  margin: 20px;
+}
+
+.pokemon-characteristics li:nth-child(odd) {
+  color: yellow;
+}
+
+.pokemon-characteristics,
+.pokemon-comments {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.popup-modal i {
+  font-size: 40px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form input,
+form textarea {
+  margin: 5px;
+  width: 300px;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 5px;
+  border: 1px solid cadetblue;
+  padding: 10px;
+}
+
+.add-comment-form button {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid cadetblue;
+  margin: 5px;
+}
+
+.popup-close {
+  display: flex;
+  justify-content: end;
+}
+
+.popup-pokemon h3 {
+  font-size: 30px;
+  margin: 20px 0;
+}
+
+/*** POPUP *****/
 
 #display-items {
   display: grid;
@@ -203,18 +305,46 @@ li {
   }
 
   .popup-modal {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    top: 100px;
+    left: 100px;
+    right: 100px;
+    bottom: 100px;
   }
 
-  .fa-heart {
-    color: red;
+  .pokemon-characteristics i {
+    font-size: 25px;
+    margin: 10px;
+  }
+
+  .pokemon-characteristics li {
+    margin: 5px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .popup-image {
+    flex-grow: 2;
+  }
+
+  .popup-pokemon {
+    display: flex;
+    align-items: center;
   }
 
   .popup-hidden {
     display: none;
+  }
+
+  .popup-modal ul {
+    height: auto;
+  }
+
+  form {
+    flex-direction: row;
+  }
+
+  .fa-heart {
+    color: red;
   }
 }
