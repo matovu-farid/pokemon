@@ -73,9 +73,16 @@ li {
 }
 
 .pokemon-characteristics,
-.pokemon-comments {
+.pokemon-comments,
+form {
   display: flex;
   flex-direction: column;
+}
+
+form input,
+form textarea,
+form button {
+  margin: 5px;
 }
 
 .popup-close {
