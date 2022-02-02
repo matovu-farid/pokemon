@@ -6,23 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body >
-    
-    
-    <header>
-      <img class="logo" src="image_link" alt="Logo" />
-      <div>
-        <span class="mobile-menu">MENU MOBILE</span>
-        <nav class="menu">
-          <ul>
-            <li><a href="index.html">Pokemon<span id="count"></span></a></li>
-            <li><a href="link2">Link2</a></li>
-            <li><a href="link3">Link3</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <main>
+  <body>
+    <main class="centered-column">
+      <header>
+        <img class="logo" src="image_link" alt="Logo" />
+        <div>
+          <span class="mobile-menu">MENU MOBILE</span>
+          <nav class="menu">
+            <ul>
+              <li>
+                <a href="index.html">Pokemon<span id="count"></span></a>
+              </li>
+              <li><a href="link2">Link2</a></li>
+              <li><a href="link3">Link3</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
       <section class="centered-column">
         <ul id="display-items"></ul>
       </section>
@@ -41,6 +42,8 @@
               <li>Height : <span id="pokemon_height"></span></li>
               <li>Weight : <span id="pokemon_weight"></span></li>
             </ul>
+            <h3>Comments</h3>
+            <ul class="pokemon-comments"></ul>
           </div>
         </div>
       </div>
