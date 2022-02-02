@@ -34,22 +34,30 @@ export default class Api {
   };
 
   getComments = async (idPokemon) => {
-    const response = await fetch(`${this.COMMENT_URL}?item_id=${idPokemon}`);
-    if ((response.status && response.status === 500) || response.status === 400) {
-      return [];
-    }
-    const data = await response.json();
-    return data.error ? [] : data;
+    const url = `${this.COMMENT_URL}?item_id=${idPokemon}`;
+    return this.#fetchDataArray(url);
   };
 
   likeUrl =() => `${this.APP_URL}${this.APP_ID}/likes/`
+
+  #fetchDataArray=async (url) => {
+    const response = await fetch(url);
+    if ((response.status && response.status === 500) || response.status === 400) {
+      return [];
+    }
+
+    const data = await response.json();
+    return data.error ? [] : data;
+  }
+
+  getLikes = () => this.#fetchDataArray(this.likeUrl());
 
   like = async (id) => {
     const url = this.likeUrl();
     const obj = {
       item_id: id,
     };
-    console.log(obj);
+
     const response = await fetch(url, {
       method: 'POST',
       mode: 'cors',
