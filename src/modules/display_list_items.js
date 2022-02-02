@@ -13,7 +13,7 @@ export const displayItems = async () => {
   popupInit(api);
   likeListener();
   const likes = await api.getLikes();
-  console.log(likes)
+  console.log(likes);
   appendNoOFLikes(likes);
 };
 

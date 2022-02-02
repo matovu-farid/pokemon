@@ -15,11 +15,12 @@ export default class Api {
     getLikes = () => Promise.resolve(
       [
         {
-          "likes": 5,
-          "item_id": "item1"
-      }
-      ]
+          likes: 5,
+          item_id: 'item1',
+        },
+      ],
     );
+
     getDisplayItems = () => Promise.resolve(
       [
         {
