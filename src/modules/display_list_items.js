@@ -3,7 +3,7 @@ import { appendCount } from './counter';
 import { appendListItem } from './create_listhtml';
 import { popupInit } from './popup';
 
-const displayItems = async () => {
+export const displayItems = async () => {
   const api = new Api();
   const displayItems = await api.getDisplayItems();
   displayItems.forEach(appendListItem);
@@ -12,3 +12,5 @@ const displayItems = async () => {
 };
 
 displayItems();
+
+export default displayItems;
