@@ -1,7 +1,7 @@
 export const listHtml = (result) => `
     <img src="${result.url}" alt="image">
      <button id="comment-${result.id}">Comments</button>
-     <p>${result.name}    <i id="on-${result.id}" class="fa fa-heart heart clicked no-display" aria-hidden="true"></i>
+     <p id="name-${result.id}">${result.name}    <i id="on-${result.id}" class="fa fa-heart heart clicked no-display" aria-hidden="true"></i>
      <i id="off-${result.id}" class="fa fa-heart-o heart" aria-hidden="true"></i></p> 
     `;
 

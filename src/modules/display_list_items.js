@@ -10,7 +10,7 @@ export const displayItems = async () => {
   displayItems.forEach(appendListItem);
   appendCount();
   popupInit(api);
-  addNewListener()
+  addNewListener();
 };
 
 displayItems();

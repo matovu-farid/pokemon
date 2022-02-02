@@ -1,23 +1,22 @@
-const addNewListener = ()=>{
-    const hearts = document.querySelectorAll('.heart');
-   
-    hearts.forEach(heart=>{
-        heart.addEventListener('click',()=>{
-            heart.classList.add('no-display')
-            const id = heart.id.match(/\d+/)[0]
-            if(heart.classList.contains('clicked')){
-                const heartOff = document.querySelector(`#off-${id}`)
-                heartOff.classList.remove('no-display')
-                
-            }else {
-                const heartOn = document.querySelector(`#on-${id}`)
+import addToggleListener from "./addHeartlistener";
+import Api from "./api";
 
-                heartOn.classList.remove('no-display')
-                
-            }
-        })
-    })
-
+const addLikeListener = (heart,id)=>{
+heart.addEventListener('click',()=>{
+    const api = new Api();
+    const name = document.querySelector(`#name-${id}`).textContent.match(/\w+/)[0]
+    console.log('name',name)
+    api.like(name)
+})
 }
+const addNewListener = () => {
+  const hearts = document.querySelectorAll('.heart');
+
+  hearts.forEach((heart) => {
+    const id = heart.id.match(/\d+/)[0];
+    addToggleListener(heart,id)
+     addLikeListener(heart,id)
+  });
+};
 
 export default addNewListener;
