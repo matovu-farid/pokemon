@@ -3,6 +3,10 @@ export default class Api {
 
   APP_URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
 
+  APP_NAME ='Pokemon_Farid_Jihane'
+
+  APP_ID = 'EtP7GW5T9AWxrJLgrSBm'
+
   COMMENT_URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/EtP7GW5T9AWxrJLgrSBm/comments';
 
   #fetchPockemon = async (url) => {
@@ -30,19 +34,49 @@ export default class Api {
   };
 
   getComments = async (idPokemon) => {
-    const response = await fetch(`${this.COMMENT_URL}?item_id=${idPokemon}`);
+    const url = `${this.COMMENT_URL}?item_id=${idPokemon}`;
+    return this.#fetchDataArray(url);
+  };
+
+  likeUrl =() => `${this.APP_URL}${this.APP_ID}/likes/`
+
+  #fetchDataArray=async (url) => {
+    const response = await fetch(url);
     if ((response.status && response.status === 500) || response.status === 400) {
       return [];
     }
+
     const data = await response.json();
     return data.error ? [] : data;
-  };
+  }
+
+  getLikes = () => this.#fetchDataArray(this.likeUrl());
+
+  like = async (id) => {
+    const url = this.likeUrl();
+    const obj = {
+      item_id: id,
+    };
+
+    const response = await fetch(url, {
+      method: 'POST',
+      mode: 'cors',
+
+      body: JSON.stringify(obj),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    });
+    const text = await response.text();
+
+    return text;
+  }
 
   registerNewApp = async () => {
     const response = await fetch(this.APP_URL, {
       method: 'POST',
       body: JSON.stringify({
-        name: 'Pokemon_Farid_Jihane',
+        name: this.APP_NAME,
       }),
       headers: {
         'Content-type': 'application/json; charset=UTF-8',

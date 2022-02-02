@@ -1,6 +1,9 @@
 export const listHtml = (result) => `
     <img src="${result.url}" alt="image">
      <button id="comment-${result.id}">Comments</button>
+     <p id="name-${result.id}">${result.name} 
+     <i id="off-${result.id}" class="fa fa-heart-o heart" aria-hidden="true"></i></p> 
+     <p class="like" id="likes-${result.id}"></p>
     `;
 
 export const appendListItem = (result) => {
