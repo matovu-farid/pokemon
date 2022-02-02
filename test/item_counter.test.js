@@ -28,8 +28,8 @@ describe('The counter', () => {
   `;
   });
 
+  const api = new Api();
   it('should mock the api', () => {
-    const api = new Api();
 
     expect(api.getDisplayItems()).resolves.toEqual([
       {
@@ -49,7 +49,7 @@ describe('The counter', () => {
   });
 
   it('should the value of (3) when displayItems is called', async () => {
-    await displayItems();
+    await displayItems(api);
     const displayList = document.querySelector('#display-items');
     expect(displayList.children.length).toBe(3);
     const count = document.querySelector('#count');
