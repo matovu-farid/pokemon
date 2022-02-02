@@ -1,5 +1,6 @@
 import { selector, selectorAll } from './tools.js';
 import { appendCommentItem } from './create_listcomment';
+import { appendCountComment } from './counter';
 
 export const popupInit = (connector) => {
   selectorAll('button[id^="comment-"], .popup-close').forEach((element) => {
@@ -19,6 +20,7 @@ export const popupInit = (connector) => {
         } else {
           selector('.pokemon-comments').innerHTML = 'No comment yet.';
         }
+        appendCountComment();
       } else {
         selector('.pokemon-comments').innerHTML = '';
       }

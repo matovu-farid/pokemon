@@ -22,7 +22,7 @@ export default class Api {
 
   getDisplayItems = async () => {
     const promises = [];
-    (Array.from(Array(6).keys())).forEach((i) => promises.push(this.getPokemonFromId(i + 1)));
+    Array.from(Array(6).keys()).forEach((i) => promises.push(this.getPokemonFromId(i + 1)));
 
     const items = await Promise.all(promises);
     return items;
