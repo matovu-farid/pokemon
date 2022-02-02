@@ -18,7 +18,7 @@ export default class Api {
 
   getDisplayItems = async () => {
     const promises = [];
-    (Array.from(Array(6).keys())).forEach((i) => promises.push(this.getPokemonFromId(i + 1)));
+    Array.from(Array(6).keys()).forEach((i) => promises.push(this.getPokemonFromId(i + 1)));
 
     const items = await Promise.all(promises);
     return items;
@@ -36,15 +36,6 @@ export default class Api {
     }
     const data = await response.json();
     return data.error ? [] : data;
-  };
-
-  getNbComments = async (idPokemon) => {
-    const response = await fetch(`${this.COMMENT_URL}?item_id=${idPokemon}`);
-    if ((response.status && response.status === 500) || response.status === 400) {
-      return 0;
-    }
-    const data = await response.json();
-    return data.error ? 0 : data.length;
   };
 
   registerNewApp = async () => {
