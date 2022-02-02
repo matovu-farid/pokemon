@@ -1,6 +1,7 @@
 import { selector } from './tools.js';
 import Api from './api';
 import { appendCommentItem } from './create_listcomment';
+import { appendCountComment } from './counter';
 
 const form = selector('form');
 
@@ -24,6 +25,7 @@ selector('form').addEventListener('submit', async (event) => {
       username: form.username.value,
       comment: form.comment.value,
     });
+    appendCountComment();
     form.reset();
   }
 });
