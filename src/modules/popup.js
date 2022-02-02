@@ -11,12 +11,16 @@ export const popupInit = (connector) => {
         selector('#pokemon_image').src = pokemon.url;
         selector('#pokemon_height').innerHTML = pokemon.height;
         selector('#pokemon_weight').innerHTML = pokemon.weight;
-
-        const comments = await connector.getComments(idPokemon);
-        comments.forEach(appendCommentItem);
         selector('#idPokemon').value = idPokemon;
 
-        selector('#nb-comments').innerHTML = await connector.getNbComments(idPokemon);
+        const comments = await connector.getComments(idPokemon);
+        if (comments.length > 0) {
+          comments.forEach(appendCommentItem);
+        } else {
+          selector('.pokemon-comments').innerHTML = 'No comment yet.';
+        }
+      } else {
+        selector('.pokemon-comments').innerHTML = '';
       }
       selector('.popup-modal').classList.toggle('popup-hidden');
     });
