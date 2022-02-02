@@ -1,3 +1,4 @@
+import likeListener from './like_listener';
 import Api from './api';
 import { appendCount } from './counter';
 import { appendListItem } from './create_listhtml';
@@ -9,6 +10,7 @@ export const displayItems = async () => {
   displayItems.forEach(appendListItem);
   appendCount();
   popupInit(api);
+  likeListener();
 };
 
 displayItems();
