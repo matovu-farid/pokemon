@@ -1,4 +1,4 @@
-import addNewListener from './add_new';
+import likeListener from './like_listener';
 import Api from './api';
 import appendNoOFLikes from './append_of_likes';
 import { appendCount } from './counter';
@@ -11,9 +11,10 @@ export const displayItems = async () => {
   displayItems.forEach(appendListItem);
   appendCount();
   popupInit(api);
-  addNewListener();
+  likeListener();
   const likes = await api.getLikes();
   appendNoOFLikes(likes);
+  
 };
 
 displayItems();
