@@ -12,8 +12,12 @@ export const displayItems = async () => {
   appendCount();
   popupInit(api);
   likeListener();
-  const likes = await api.getLikes();
-  appendNoOFLikes(likes);
+  try {
+    const likes = await api.getLikes();
+    appendNoOFLikes(likes);
+  } catch (error) {
+    // try catch error
+  }
 };
 
 displayItems();
