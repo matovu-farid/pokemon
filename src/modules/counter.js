@@ -1,9 +1,13 @@
-export const getCount = () => {
-  const listItems = document.querySelectorAll('#display-items > li');
-  return listItems.length;
+const getCount = (selector) => document.querySelectorAll(selector).length;
+
+const countAndDisplay = (countItems, displayItem) => {
+  document.querySelector(displayItem).textContent = `(${getCount(countItems)})`;
 };
 
 export const appendCount = () => {
-  const count = document.querySelector('#count');
-  count.textContent = `(${getCount()})`;
+  countAndDisplay('#display-items > li', '#count');
+};
+
+export const appendCountComment = () => {
+  countAndDisplay('.pokemon-comments > li', '#nb-comments');
 };
