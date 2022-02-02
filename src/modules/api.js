@@ -44,12 +44,22 @@ export default class Api {
 
   likeUrl =() => `${this.APP_URL}${this.APP_ID}/likes/`
 
+  getLikes = async () => {
+    const response = await fetch(this.likeUrl());
+    if ((response.status && response.status === 500) || response.status === 400) {
+      return [];
+    }
+
+    const data = await response.json();
+    return data.error ? [] : data;
+  };
+
   like = async (id) => {
     const url = this.likeUrl();
     const obj = {
       item_id: id,
     };
-    console.log(obj);
+
     const response = await fetch(url, {
       method: 'POST',
       mode: 'cors',
