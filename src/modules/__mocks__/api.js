@@ -14,35 +14,39 @@ export default class Api {
     return result;
   };
 
-  getDisplayItems = () => Promise.resolve([
-    {
-      url: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/11.svg',
-      id: 11,
-    },
-    {
-      url: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/12.svg',
-      id: 12,
-    },
-    {
-      url: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/13.svg',
-      id: 13,
-    },
-  ]);
+  getDisplayItems = () =>
+    Promise.resolve([
+      {
+        url: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/11.svg',
+        id: 11,
+      },
+      {
+        url: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/12.svg',
+        id: 12,
+      },
+      {
+        url: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/13.svg',
+        id: 13,
+      },
+    ]);
 
-  getLikes = () => [
-    { likes: 9, item_id: '11' },
-    { item_id: 'bulbasaur', likes: 1 },
-    { likes: 9, item_id: '2' },
-  ];
+  getLikes = () =>
+    Promise.resolve([
+      {
+        likes: 5,
+        item_id: 'item1',
+      },
+    ]);
 
   // eslint-disable-next-line no-unused-vars
-  getComments = (idPokemon) => Promise.resolve([
-    {
-      comment: 'This is my favorite pokemon.',
-      username: 'Noemi',
-      creation_date: '2022-02-02',
-    },
-  ]);
+  getComments = (idPokemon) =>
+    Promise.resolve([
+      {
+        comment: 'This is my favorite pokemon.',
+        username: 'Noemi',
+        creation_date: '2022-02-02',
+      },
+    ]);
 
   // eslint-disable-next-line no-unused-vars
   getPokemonFromId = async (idPokemon) => ({
