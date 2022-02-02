@@ -9,7 +9,7 @@ export const listHtml = (result) => `
 export const appendListItem = (result) => {
   const listItem = document.createElement('li');
   listItem.innerHTML = listHtml(result);
-  listItem.classList.add(...['centered-column','card']);
+  listItem.classList.add(...['centered-column', 'card']);
   const displayItems = document.querySelector('#display-items');
   displayItems.append(listItem);
 };
