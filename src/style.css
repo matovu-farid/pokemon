@@ -118,6 +118,14 @@ li {
   width: 100px;
 }
 
+.clicked {
+  color: red;
+}
+
+.no-display {
+  display: none;
+}
+
 @media (min-width: 750px) {
   header {
     display: flex;
@@ -146,8 +154,8 @@ li {
     align-items: center;
   }
 
-  #display-items {
-    /* grid-template-columns: 200px 200px 200px; */
+  .fa-heart {
+    color: red;
   }
 
   .popup-hidden {
