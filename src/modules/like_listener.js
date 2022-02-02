@@ -6,7 +6,7 @@ const addLikeListener = (heart, id) => {
     api.like(id);
   });
 };
-const addNewListener = () => {
+const likeListener = () => {
   const hearts = document.querySelectorAll('.heart');
 
   hearts.forEach((heart) => {
@@ -16,4 +16,4 @@ const addNewListener = () => {
   });
 };
 
-export default addNewListener;
+export default likeListener;
