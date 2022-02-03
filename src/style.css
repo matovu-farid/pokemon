@@ -39,12 +39,17 @@ footer {
   text-align: center;
 }
 
-header {
+main > header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 0;
   width: 100%;
+  position: sticky;
+  top: 0;
+  background-color: #302e37;
+  box-shadow: rgb(37, 36, 36) 0 5px 5px;
+  z-index: 2;
 }
 
 button {
@@ -303,6 +308,7 @@ form textarea {
 
 .heart {
   color: hotpink;
+  cursor: pointer;
 }
 
 .like {
@@ -330,7 +336,7 @@ form textarea {
   }
 
   #display-items {
-    grid-template-columns: 300px 300px 300px;
+    grid-template-columns: 250px 250px 250px;
   }
 
   #load-buttons {
@@ -356,6 +362,7 @@ form textarea {
 
   .popup-close {
     right: 120px;
+    cursor: pointer;
   }
 
   .popup-modal {
