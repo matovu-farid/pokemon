@@ -2,9 +2,9 @@
 
 # Pokemon
 
-This is an app that displays the scores on a pokemon.
+This is an app that displays pokemons using a remote API.
 
-![screenshot](./screenshot.PNG)
+![screenshot](./assets/screen1.png)
 
 This project shows pokemon characters.
 
@@ -15,8 +15,24 @@ This project shows pokemon characters.
 - Javascript
 - webpack
 
+## Live Demo
+
+This project is deployed on a github page on the link below:
+
+- https://matovu-farid.github.io/pokemon/
+
+## Video Demo
+
+[Video](https://www.loom.com/share/2a3bc2add93044a0bc4735dd45d48b63)
+
+
+
 ## Getting Started
+
+### Install
+
 To get the content of this project locally you need to run this command in your terminal:
+
 ```
 - git clone your https://github.com/matovu-farid/pokemon.git
 - cd project pokemon
@@ -24,9 +40,12 @@ To get the content of this project locally you need to run this command in your 
 - npm start
 ```
 
-### Deployment
-This project is deployed on a github page on the link below:
-- https://matovu-farid.github.io/pokemon/
+### Run tests
+
+```
+- npm test
+```
+
 ## Author
 
 👤 **Matovu Farid Nkoba**
@@ -38,9 +57,7 @@ This project is deployed on a github page on the link below:
 👤 **JihaneH**
 
 - GitHub: [@githubhandle](https://github.com/jihaneH)
-- Twitter: [@twitterhandle](https://twitter.com/jijihaddad)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/jihane-haddad/)
-
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/jihanne/)
 
 ## 📝 License
 
