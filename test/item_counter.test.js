@@ -1,7 +1,7 @@
 import {
   jest, expect, it, beforeEach, describe,
 } from '@jest/globals';
-import Api from '../src/modules/api.js';
+import { Api } from '../src/modules/api.js';
 import 'regenerator-runtime/runtime';
 import { displayItems } from '../src/modules/display_list_items';
 
@@ -28,9 +28,8 @@ describe('The counter', () => {
   `;
   });
 
+  const api = new Api();
   it('should mock the api', () => {
-    const api = new Api();
-
     expect(api.getDisplayItems()).resolves.toEqual([
       {
         url: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/11.svg',

@@ -1,5 +1,5 @@
 import { selector } from './tools.js';
-import Api from './api';
+import api from './api';
 import { appendCommentItem } from './create_listcomment';
 import { appendCountComment } from './counter';
 
@@ -15,7 +15,6 @@ selector('form').addEventListener('submit', async (event) => {
     selector('small').innerHTML = 'Please provide a message';
     form.comment.focus();
   } else {
-    const api = new Api();
     await api.addComment(form.idPokemon.value, form.username.value, form.comment.value);
 
     const today = new Date();

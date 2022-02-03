@@ -141,10 +141,6 @@ form button {
     align-items: center;
   }
 
-  footer {
-    position: absolute;
-  }
-
   .menu {
     display: inherit;
   }
