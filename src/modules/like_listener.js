@@ -3,7 +3,6 @@ import appendNoOFLikes from './append_no_of_likes';
 
 const addLikeListener = (heart, id) => {
   heart.addEventListener('click', async () => {
-   
     await api.like(id);
     const likes = await api.getLikes();
     appendNoOFLikes(likes);

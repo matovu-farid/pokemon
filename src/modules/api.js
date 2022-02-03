@@ -9,6 +9,8 @@ export class Api {
 
   COMMENT_URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/EtP7GW5T9AWxrJLgrSBm/comments';
 
+  POCKEMON_COUNT = 0
+
   #fetchPockemon = async (url) => {
     const result = {};
     const data = await (await fetch(url)).json();
@@ -22,8 +24,9 @@ export class Api {
 
   getDisplayItems = async () => {
     const promises = [];
-    Array.from(Array(6).keys()).forEach((i) => promises.push(this.getPokemonFromId(i + 1)));
-
+    Array.from(Array(6).keys())
+      .forEach((i) => promises.push(this.getPokemonFromId(i + 1 + this.POCKEMON_COUNT)));
+    this.POCKEMON_COUNT += 6;
     const items = await Promise.all(promises);
     return items;
   };
@@ -68,7 +71,7 @@ export class Api {
       },
     });
     const text = await response.text();
-
+    console.log('response', text);
     return text;
   }
 

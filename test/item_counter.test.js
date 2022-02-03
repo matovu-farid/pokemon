@@ -1,7 +1,7 @@
 import {
   jest, expect, it, beforeEach, describe,
 } from '@jest/globals';
-import {Api} from '../src/modules/api.js';
+import { Api } from '../src/modules/api.js';
 import 'regenerator-runtime/runtime';
 import { displayItems } from '../src/modules/display_list_items';
 
@@ -30,7 +30,6 @@ describe('The counter', () => {
 
   const api = new Api();
   it('should mock the api', () => {
-
     expect(api.getDisplayItems()).resolves.toEqual([
       {
         url: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/11.svg',
@@ -49,7 +48,7 @@ describe('The counter', () => {
   });
 
   it('should the value of (3) when displayItems is called', async () => {
-    await displayItems(api);
+    await displayItems();
     const displayList = document.querySelector('#display-items');
     expect(displayList.children.length).toBe(3);
     const count = document.querySelector('#count');

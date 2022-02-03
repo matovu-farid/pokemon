@@ -1,6 +1,4 @@
-export  class Api {
-  
-
+export class Api {
     getLikes = () => Promise.resolve(
       [
         {

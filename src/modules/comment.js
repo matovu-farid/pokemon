@@ -15,7 +15,6 @@ selector('form').addEventListener('submit', async (event) => {
     selector('small').innerHTML = 'Please provide a message';
     form.comment.focus();
   } else {
-    
     await api.addComment(form.idPokemon.value, form.username.value, form.comment.value);
 
     const today = new Date();
