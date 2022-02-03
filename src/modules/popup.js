@@ -22,11 +22,12 @@ export const popupInit = (connector) => {
           selector('.pokemon-comments').innerHTML = 'No comment yet.';
         }
         appendCountComment();
+        selector('.popup-modal').classList.remove('popup-hidden');
       } else {
         selector('.pokemon-comments').innerHTML = '';
         selector('body').classList.remove('popup-open');
+        selector('.popup-modal').classList.add('popup-hidden');
       }
-      selector('.popup-modal').classList.toggle('popup-hidden');
     });
   });
 
