@@ -23,7 +23,9 @@ This project is deployed on a github page on the link below:
 
 ## Video Demo
 
-![Video](https://www.loom.com/share/2a3bc2add93044a0bc4735dd45d48b63)
+[Video](https://www.loom.com/share/2a3bc2add93044a0bc4735dd45d48b63)
+
+
 
 ## Getting Started
 
