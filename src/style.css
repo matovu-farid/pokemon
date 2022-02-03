@@ -11,6 +11,11 @@ body {
   background-color: #302e37;
   color: #c1c7d0;
   font-family: 'Nanum Gothic', sans-serif;
+  font-size: 10px;
+}
+
+body * {
+  font-size: 1.2rem;
 }
 
 body.popup-open {
@@ -299,6 +304,29 @@ form textarea {
   display: none;
 }
 
+.heart {
+  color: hotpink;
+}
+
+.like {
+  font-size: 0.8rem;
+}
+
+#load-buttons {
+  margin: 10px;
+  display: flex;
+  width: 300px;
+  justify-content: space-between;
+  
+}
+
+#load-buttons > button {
+  filter: invert(20%);
+  padding: 5px 5px;
+
+}
+
+
 @media (min-width: 750px) {
   header {
     display: flex;
@@ -306,6 +334,26 @@ form textarea {
     justify-content: space-between;
     align-items: center;
   }
+
+  #load-buttons {
+    margin: 0;
+    
+    width: 100%;
+    
+  }
+
+  #show-less {
+    position: fixed;
+    left: 7.5%;
+    top: 50%
+    }
+    
+    #load-more {
+    position: fixed;
+    right: 7.5%;
+    top: 50%;
+    }
+    
 
   .menu {
     display: inherit;
@@ -359,7 +407,5 @@ form textarea {
     flex-direction: row;
   }
 
-  .fa-heart {
-    color: red;
-  }
+
 }
