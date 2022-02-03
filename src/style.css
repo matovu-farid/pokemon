@@ -13,6 +13,11 @@ body {
   font-family: 'Nanum Gothic', sans-serif;
 }
 
+body.popup-open {
+  overflow: hidden;
+  position: fixed;
+}
+
 a {
   text-decoration: none;
   color: inherit;
