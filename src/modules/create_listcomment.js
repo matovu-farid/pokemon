@@ -1,4 +1,4 @@
-export const listComment = (comment) => `${comment.creation_date} ${comment.username} : ${comment.comment} `;
+export const listComment = (comment) => `<span class="date">${comment.creation_date} </span><span class="username">${comment.username} :</span><span class="comment"> ${comment.comment} `;
 
 export const appendCommentItem = (comment) => {
   const listItem = document.createElement('li');
