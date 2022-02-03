@@ -36,6 +36,7 @@ footer {
   position: relative;
   bottom: 0;
   margin-top: 100px;
+  text-align: center;
 }
 
 header {
@@ -57,10 +58,6 @@ button {
 
 button:hover {
   filter: invert(20%);
-}
-
-.menu {
-  display: none;
 }
 
 ul {
@@ -98,7 +95,7 @@ li {
 .card {
   border-radius: 10%;
   box-shadow: #c2bfbf 0 0 20px;
-  padding: 10px 0;
+  padding: 15px 30px;
   transform: scale(1);
   transition: 250ms transform ease-in;
   animation: slide-in ease-out 250ms 1;
@@ -279,7 +276,7 @@ form textarea {
   display: grid;
   width: 100%;
   max-width: 800px;
-  grid-template-columns: repeat(auto-fill, 200px);
+  grid-template-columns: 1fr;
   grid-gap: 10px;
   align-items: center;
 }
@@ -317,15 +314,12 @@ form textarea {
   display: flex;
   width: 300px;
   justify-content: space-between;
-  
 }
 
 #load-buttons > button {
   filter: invert(20%);
   padding: 5px 5px;
-
 }
-
 
 @media (min-width: 750px) {
   header {
@@ -335,32 +329,25 @@ form textarea {
     align-items: center;
   }
 
+  #display-items {
+    grid-template-columns: 300px 300px 300px;
+  }
+
   #load-buttons {
     margin: 0;
-    
     width: 100%;
-    
   }
 
   #show-less {
     position: fixed;
     left: 7.5%;
-    top: 50%
-    }
-    
-    #load-more {
+    top: 50%;
+  }
+
+  #load-more {
     position: fixed;
     right: 7.5%;
     top: 50%;
-    }
-    
-
-  .menu {
-    display: inherit;
-  }
-
-  .mobile-menu {
-    display: none;
   }
 
   .pokemon-characteristics {
@@ -406,6 +393,4 @@ form textarea {
   form {
     flex-direction: row;
   }
-
-
 }

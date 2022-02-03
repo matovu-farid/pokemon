@@ -26,8 +26,8 @@ selector('form').addEventListener('submit', async (event) => {
     });
     appendCountComment();
     form.reset();
-    const commentsDiv = document.querySelector('.pokemon-comments')
-    
-    commentsDiv.scroll(0,commentsDiv.scrollHeight)
+    const commentsDiv = document.querySelector('.pokemon-comments');
+
+    commentsDiv.scroll(0, commentsDiv.scrollHeight);
   }
 });
