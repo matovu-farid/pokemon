@@ -138,9 +138,9 @@ li {
   color: #fc0;
   color: white;
 }
+
 .popup-modal::-webkit-scrollbar {
   width: 0;
-
 }
 
 .popup-datas {
@@ -150,11 +150,6 @@ li {
 
 .popup-pokemon {
   text-align: center;
-}
-
-.popup-modal ul {
-  list-style: none;
-  height: 201px;
 }
 
 .pokemon-characteristics {
@@ -168,6 +163,8 @@ li {
   align-content: center;
   align-items: center;
   justify-content: center;
+  list-style: none;
+  height: 201px;
 }
 
 .pokemon-characteristics,
@@ -175,10 +172,6 @@ li {
 .popup-close {
   display: flex;
   justify-content: end;
-}
-
-.pokemon-comments::-webkit-scrollbar {
-  width: 0;
 }
 
 .pokemon-characteristics li span {
@@ -230,6 +223,10 @@ h4 {
   align-items: flex-start;
 }
 
+.pokemon-comments::-webkit-scrollbar {
+  width: 0;
+}
+
 .popup-modal i {
   font-size: 40px;
 }
@@ -262,6 +259,8 @@ form textarea {
 .popup-close {
   display: flex;
   justify-content: end;
+  position: fixed;
+  right: 30px;
 }
 
 .popup-pokemon h3 {
@@ -314,6 +313,14 @@ form textarea {
 
   .mobile-menu {
     display: none;
+  }
+
+  .pokemon-characteristics {
+    height: auto;
+  }
+
+  .popup-close {
+    right: 120px;
   }
 
   .popup-modal {
