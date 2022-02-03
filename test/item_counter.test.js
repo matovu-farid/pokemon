@@ -42,7 +42,7 @@ const innerHtml = `
             </form>
           </div>
         </div>
-      </div>`
+      </div>`;
 
 describe('The counter', () => {
   document.body.innerHTML = innerHtml;
