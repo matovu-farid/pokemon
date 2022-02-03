@@ -97,7 +97,7 @@ li {
   padding: 10px 0;
   transform: scale(1);
   transition: 250ms transform ease-in;
-  animation: slide-in ease-out 3s 1;
+  animation: slide-in ease-out 250ms 1;
 }
 
 @keyframes slide-in {
