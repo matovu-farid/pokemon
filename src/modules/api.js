@@ -71,7 +71,6 @@ export class Api {
       },
     });
     const text = await response.text();
-    console.log('response', text);
     return text;
   }
 
