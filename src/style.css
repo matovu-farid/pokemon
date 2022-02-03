@@ -115,10 +115,6 @@ li {
 
 /*** POPUP *****/
 
-.popup-parent {
-  /* position: absolute; */
-}
-
 .pokemon-section {
   margin: 50px;
 }
@@ -141,6 +137,10 @@ li {
   padding-top: 10px;
   color: #fc0;
   color: white;
+}
+.popup-modal::-webkit-scrollbar {
+  width: 0;
+
 }
 
 .popup-datas {
@@ -175,6 +175,10 @@ li {
 .popup-close {
   display: flex;
   justify-content: end;
+}
+
+.pokemon-comments::-webkit-scrollbar {
+  width: 0;
 }
 
 .pokemon-characteristics li span {
@@ -342,10 +346,6 @@ form textarea {
 
   .popup-hidden {
     display: none;
-  }
-
-  .popup-modal ul {
-    height: auto;
   }
 
   form {
