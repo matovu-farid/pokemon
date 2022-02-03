@@ -43,7 +43,6 @@ describe('The counter', () => {
         url: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/13.svg',
         id: 13,
       },
-
     ]);
   });
 
