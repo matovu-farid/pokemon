@@ -2,7 +2,7 @@ import {
   jest, expect, it, beforeEach, describe,
 } from '@jest/globals';
 import 'regenerator-runtime/runtime';
-import Api from '../src/modules/api.js';
+import { Api } from '../src/modules/api.js';
 import { displayItems } from '../src/modules/display_list_items';
 import '../src/modules/append_no_of_likes.js';
 

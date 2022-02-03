@@ -1,4 +1,4 @@
-export default class Api {
+export class Api {
   POKEMON_URL = 'https://pokeapi-215911.firebaseapp.com/api/v2/pokemon';
 
   APP_URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
@@ -8,6 +8,8 @@ export default class Api {
   APP_ID = 'EtP7GW5T9AWxrJLgrSBm'
 
   COMMENT_URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/EtP7GW5T9AWxrJLgrSBm/comments';
+
+  POCKEMON_COUNT = 0
 
   #fetchPockemon = async (url) => {
     const result = {};
@@ -22,8 +24,9 @@ export default class Api {
 
   getDisplayItems = async () => {
     const promises = [];
-    Array.from(Array(6).keys()).forEach((i) => promises.push(this.getPokemonFromId(i + 1)));
-
+    Array.from(Array(6).keys())
+      .forEach((i) => promises.push(this.getPokemonFromId(i + 1 + this.POCKEMON_COUNT)));
+    this.POCKEMON_COUNT += 6;
     const items = await Promise.all(promises);
     return items;
   };
@@ -68,7 +71,6 @@ export default class Api {
       },
     });
     const text = await response.text();
-
     return text;
   }
 
@@ -102,3 +104,6 @@ export default class Api {
     return data;
   };
 }
+
+const api = new Api();
+export default api;

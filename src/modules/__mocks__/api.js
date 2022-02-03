@@ -1,4 +1,4 @@
-export default class Api {
+export class Api {
   getDisplayItems = () => Promise.resolve([
     {
       url: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/11.svg',
@@ -29,7 +29,8 @@ export default class Api {
     },
   ]);
 
-  getPokemonFromId = async () => ({
-
-  });
+  getPokemonFromId = () => ({});
 }
+
+const api = new Api();
+export default api;

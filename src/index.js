@@ -5,3 +5,4 @@ import './modules/popup.js';
 import './modules/display_list_items';
 import './modules/like_listener';
 import './modules/comment';
+import './modules/load_pokemon';
