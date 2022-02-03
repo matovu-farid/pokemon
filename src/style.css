@@ -15,7 +15,6 @@ body {
 
 body.popup-open {
   overflow: hidden;
-  position: fixed;
 }
 
 a {
@@ -115,6 +114,10 @@ li {
 }
 
 /*** POPUP *****/
+
+.popup-parent {
+  /* position: absolute; */
+}
 
 .pokemon-section {
   margin: 50px;

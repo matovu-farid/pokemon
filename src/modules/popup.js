@@ -29,6 +29,10 @@ export const popupInit = (connector) => {
       selector('.popup-modal').classList.toggle('popup-hidden');
     });
   });
+
+  selector('.popup-close').addEventListener('click', () => {
+    selector('body').classList.remove('popup-open');
+  });
 };
 
 export default popupInit;
