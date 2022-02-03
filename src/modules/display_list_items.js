@@ -9,8 +9,8 @@ export const displayItems = async () => {
   const displayItems = await api.getDisplayItems();
   displayItems.forEach(appendListItem);
   appendCount();
-  popupInit(api);
-  likeListener();
+   popupInit(api);
+   likeListener();
   const likes = await api.getLikes();
   appendNoOFLikes(likes);
 };
