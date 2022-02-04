@@ -247,7 +247,8 @@ form textarea {
   width: 100%;
   max-width: 250px;
   filter: grayscale(100%);
-  transition: filter 500ms;
+  opacity: 0;
+  transition: filter 500ms, opacity 1s;
 }
 
 #display-items li:hover img {

@@ -6,7 +6,7 @@ import './comment';
 import appendNoOFLikes from './append_no_of_likes';
 import { appendCount } from './counter';
 import { popupInit } from './popup';
-import { selector } from './tools';
+import { selector, selectorAll } from './tools';
 
 export const displayItems = async () => {
   const displayItems = await api.getDisplayItems();
@@ -45,5 +45,12 @@ function mqHandler(e) {
     selector('.add-comment-form').appendChild(selector('.comments-box'));
   }
 }
+
+window.onload = function () {
+  setTimeout(function () {
+    document.body.style.opacity = '100';
+    selectorAll('img').forEach((element) => (element.style.opacity = '1'));
+  }, 500);
+};
 
 export default displayItems;
