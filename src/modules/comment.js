@@ -19,6 +19,10 @@ selector('form').addEventListener('submit', async (event) => {
 
     const today = new Date();
 
+    if (selector('.pokemon-comments').innerHTML === 'No comment yet.') {
+      selector('.pokemon-comments').innerHTML = '';
+    }
+
     appendCommentItem({
       creation_date: `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`,
       username: form.username.value,
