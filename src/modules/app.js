@@ -34,10 +34,6 @@ document.querySelector('#load-more').addEventListener('click', () => {
   displayItems();
 });
 
-const mqLarge = window.matchMedia('(min-width : 1050px)');
-mqLarge.addEventListener('change', mqHandler);
-
-// media query handler function
 function mqHandler(e) {
   if (e.matches) {
     selector('aside').appendChild(selector('.comments-box'));
@@ -46,10 +42,15 @@ function mqHandler(e) {
   }
 }
 
+const mqLarge = window.matchMedia('(min-width : 1050px)');
+mqLarge.addEventListener('change', mqHandler);
+
 window.onload = function () {
-  setTimeout(function () {
+  setTimeout(() => {
     document.body.style.opacity = '100';
-    selectorAll('img').forEach((element) => (element.style.opacity = '1'));
+    selectorAll('img').forEach((element) => {
+      element.style.opacity = '1';
+    });
   }, 500);
 };
 
