@@ -262,6 +262,10 @@ form textarea {
   opacity: 1;
 }
 
+small {
+  font-size: small;
+}
+
 @media (min-width: 750px) {
   header {
     display: flex;

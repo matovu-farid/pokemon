@@ -5,13 +5,13 @@ import './comment';
 // import './load_pokemon';
 
 import appendNoOFLikes from './append_no_of_likes';
-// import { appendCount } from './counter';
+//import { appendCount } from './counter';
 import { popupInit } from './popup';
 
 export const displayItems = async () => {
   const displayItems = await api.getDisplayItems();
   displayItems.forEach(appendListItem);
-  // appendCount();
+  //appendCount();
   popupInit(api);
   likeListener();
   const likes = await api.getLikes();
