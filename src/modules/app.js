@@ -1,6 +1,7 @@
 import api from './api';
 import { appendListItem } from './create_listhtml';
 import likeListener from './like_listener';
+import './comment';
 // import './load_pokemon';
 
 import appendNoOFLikes from './append_no_of_likes';
