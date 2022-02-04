@@ -3,7 +3,7 @@ import { appendCommentItem } from './create_listcomment';
 import { appendCountComment } from './counter';
 
 export const popupInit = (connector) => {
-  selectorAll('button[id^="comment-"], .popup-close').forEach((element) => {
+  selectorAll('button[id^="comment-"]').forEach((element) => {
     element.addEventListener('click', async (event) => {
       if (selector('.popup-modal').classList.contains('popup-hidden')) {
         selector('body').classList.add('popup-open');
@@ -33,6 +33,7 @@ export const popupInit = (connector) => {
 
   selector('.popup-close').addEventListener('click', () => {
     selector('body').classList.remove('popup-open');
+    selector('.popup-modal').classList.add('popup-hidden');
   });
 };
 
