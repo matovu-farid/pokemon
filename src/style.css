@@ -155,7 +155,7 @@ form textarea {
   font-size: 14px;
   line-height: 20px;
   border-radius: 5px;
-  border: 1px solid cadetblue;
+  border: 1px solid #e2d6a8;
   padding: 10px;
 }
 
@@ -163,7 +163,7 @@ form textarea {
   background-color: white;
   padding: 10px;
   border-radius: 10px;
-  border: 1px solid cadetblue;
+  border: 1px solid #e2d6a8;
   margin: 5px;
 }
 
