@@ -281,6 +281,15 @@ small {
   font-size: small;
 }
 
+.load-more {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#load-more {
+  font-size: xx-large;
+}
+
 @media (min-width: 750px) {
   header {
     display: flex;
@@ -363,8 +372,6 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
-
 
 footer {
   text-indent: 20px;
@@ -483,8 +490,6 @@ li {
 .no-display {
   display: none;
 }
-
-
 
 .like {
   font-size: 0.8rem;
