@@ -1,5 +1,3 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
-
 # Pokemon
 
 This is an app that displays pokemons using a remote API.
@@ -49,16 +47,17 @@ To get the content of this project locally you need to run this command in your 
 
 ## Author
 
+👤 **JihaneH**
+
+- GitHub: [@githubhandle](https://github.com/jihaneH)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/jihanne/)
+
+
 👤 **Matovu Farid Nkoba**
 
 - GitHub: [@matovu-farid](https://github.com/matovu-farid)
 - Twitter: [@matovu100](https://twitter.com/matovu100)
 - LinkedIn: [matovu-farid](https://www.linkedin.com/in/matovu-farid-48b80257)
-
-👤 **JihaneH**
-
-- GitHub: [@githubhandle](https://github.com/jihaneH)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/jihanne/)
 
 ## 📝 License
 
