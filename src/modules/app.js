@@ -6,6 +6,7 @@ import './comment';
 import appendNoOFLikes from './append_no_of_likes';
 import { appendCount } from './counter';
 import { popupInit } from './popup';
+import { selector } from './tools';
 
 export const displayItems = async () => {
   const displayItems = await api.getDisplayItems();
@@ -32,5 +33,17 @@ export const displayLess = async () => {
 document.querySelector('#load-more').addEventListener('click', () => {
   displayItems();
 });
+
+const mqLarge = window.matchMedia('(min-width : 1050px)');
+mqLarge.addEventListener('change', mqHandler);
+
+// media query handler function
+function mqHandler(e) {
+  if (e.matches) {
+    selector('aside').appendChild(selector('.comments-box'));
+  } else {
+    selector('.add-comment-form').appendChild(selector('.comments-box'));
+  }
+}
 
 export default displayItems;
