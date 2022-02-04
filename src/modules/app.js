@@ -16,6 +16,9 @@ export const displayItems = async () => {
   likeListener();
   const likes = await api.getLikes();
   appendNoOFLikes(likes);
+  selectorAll('img').forEach((element) => {
+    element.style.opacity = '1';
+  });
 };
 
 export const displayLess = async () => {
@@ -36,7 +39,7 @@ document.querySelector('#load-more').addEventListener('click', () => {
 
 function mqHandler(e) {
   if (e.matches) {
-    selector('aside').appendChild(selector('.comments-box'));
+    selector('aside section').appendChild(selector('.comments-box'));
   } else {
     selector('.add-comment-form').appendChild(selector('.comments-box'));
   }

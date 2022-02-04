@@ -28,10 +28,6 @@ main {
   flex-direction: column;
 }
 
-main section {
-  padding-top: 66px;
-}
-
 aside {
   width: 100%;
   box-sizing: border-box;
@@ -42,6 +38,10 @@ aside {
   padding-top: 10px;
   position: fixed;
   z-index: 999;
+}
+
+#pokemon_name_title {
+  display: none;
 }
 
 .heart {
@@ -340,11 +340,8 @@ small {
     position: static;
   }
 
-  header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  #pokemon_name_title {
+    display: inherit;
   }
 
   .popup-pokemon h3 {
@@ -438,12 +435,12 @@ small {
     font-size: 16px;
     background: #302e37;
     height: auto;
-    max-height: 80vh;
+    max-height: 70vh;
   }
 
-  .comments-box {
+  aside section {
     position: fixed;
-    top: 75px;
+    top: 0;
     left: 10px;
     width: 24%;
   }
@@ -452,230 +449,3 @@ small {
     margin-top: 20px;
   }
 }
-
-/*
-body * {
-  font-size: 1.2rem;
-}
-
-h1 {
-  display: inline;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-footer {
-  text-indent: 20px;
-  width: 100%;
-  margin: 0;
-  padding: 40px 0;
-  border-top: 2px solid #3d3d3d;
-  border-bottom: 2px solid #3d3d3d;
-  position: relative;
-  bottom: 0;
-  margin-top: 100px;
-  text-align: center;
-}
-
-main > header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0;
-  width: 100%;
-  position: sticky;
-  top: 0;
-  background-color: #302e37;
-  box-shadow: rgb(37, 36, 36) 0 5px 5px;
-  z-index: 2;
-}
-
-button {
-  border: none;
-  cursor: pointer;
-  padding: 5px 0;
-  border-radius: 5px;
-  filter: invert(80%);
-  transition: 250ms filter ease-in;
-}
-
-button:hover {
-  filter: invert(20%);
-}
-
-ul {
-  list-style: none;
-  display: flex;
-}
-
-li {
-  padding-right: 10px;
-}
-
-.logo {
-  width: 200px;
-  object-fit: contain;
-}
-
-.date {
-  font-size: smaller;
-  color: antiquewhite;
-}
-
-.username {
-  color: aquamarine;
-  font-weight: bold;
-}
-
-.pokemon-name {
-  padding: 5px 0;
-}
-
-.pokemon-characteristics i {
-  font-size: xx-large;
-}
-
-.card {
-  border-radius: 10%;
-  box-shadow: #c2bfbf 0 0 20px;
-  padding: 15px 30px;
-  transform: scale(1);
-  transition: 250ms transform ease-in;
-  animation: slide-in ease-out 250ms 1;
-}
-
-@keyframes slide-in {
-  0% {
-    transform: scaleX(0);
-  }
-
-  100% {
-    transform: scaleX(1);
-  }
-}
-
-.card:hover {
-  transform: scale(1.12, 1.1);
-}
-
-.pokemon-section {
-  margin: 50px;
-}
-
-.centered-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#display-items img {
-  height: 150px;
-  object-fit: contain;
-  margin-bottom: 10px;
-}
-
-#display-items button {
-  width: 100px;
-}
-
-.no-display {
-  display: none;
-}
-
-.like {
-  font-size: 0.8rem;
-}
-
-#load-buttons {
-  margin: 10px;
-  display: flex;
-  width: 300px;
-  justify-content: space-between;
-}
-
-#load-buttons > button {
-  filter: invert(20%);
-  padding: 5px 5px;
-}
-
-@media (min-width: 750px) {
-  header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  #display-items {
-    grid-template-columns: 250px 250px 250px;
-  }
-
-  #load-buttons {
-    margin: 0;
-    width: 100%;
-  }
-
-  .pokemon-characteristics {
-    height: auto;
-  }
-
-  .popup-close {
-    right: 120px;
-    cursor: pointer;
-  }
-
-  .popup-modal {
-    top: 100px;
-    left: 100px;
-    right: 100px;
-    bottom: 100px;
-  }
-
-  .pokemon-characteristics i {
-    font-size: 25px;
-    margin: 10px;
-  }
-
-  .pokemon-characteristics li {
-    margin: 5px;
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-  }
-
-  .popup-image {
-    flex-grow: 2;
-  }
-
-  .popup-pokemon {
-    display: flex;
-    align-items: center;
-  }
-
-  .popup-hidden {
-    display: none;
-  }
-
-  form {
-    flex-direction: row;
-  }
-}
-
-@media (min-width: 1100px) {
-  #show-less {
-    position: fixed;
-    left: 7.5%;
-    top: 50%;
-  }
-
-  #load-more {
-    position: fixed;
-    right: 7.5%;
-    top: 50%;
-  }
-}
-
-*/
