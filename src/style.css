@@ -251,9 +251,17 @@ form textarea {
   filter: grayscale(0%);
 }
 
+.desactivate #display-items li:hover img {
+  filter: grayscale(100%);
+}
+
 #display-items li:hover {
   box-shadow: 1px 1px 10px #ccba59;
   border-radius: 10px;
+}
+
+.desactivate #display-items li:hover {
+  box-shadow: none;
 }
 
 .pokemon-name {
@@ -266,6 +274,10 @@ form textarea {
 
 #display-items li:hover .pokemon-name {
   opacity: 1;
+}
+
+.desactivate #display-items li:hover .pokemon-name {
+  opacity: 0;
 }
 
 #display-items button {
@@ -284,8 +296,16 @@ form textarea {
   opacity: 1;
 }
 
+.desactivate #display-items li:hover button {
+  opacity: 0;
+}
+
 #display-items li:hover .pokemon-likes {
   opacity: 1;
+}
+
+.desactivate #display-items li:hover .pokemon-likes {
+  opacity: 0;
 }
 
 small {
