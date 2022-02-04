@@ -19,7 +19,7 @@ export const popupInit = (connector) => {
         if (comments.length > 0) {
           //comments.forEach(appendCommentItem);
         } else {
-          selector('.pokemon-comments').innerHTML = 'No comment yet.';
+          // selector('.pokemon-comments').innerHTML = 'No comment yet.';
         }
         //appendCountComment();
         selector('.popup-modal').classList.remove('popup-hidden');
