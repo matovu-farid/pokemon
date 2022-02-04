@@ -1,6 +1,6 @@
 import { selector, selectorAll } from './tools.js';
-import { appendCommentItem } from './create_listcomment';
-import { appendCountComment } from './counter';
+//import { appendCommentItem } from './create_listcomment';
+//import { appendCountComment } from './counter';
 
 export const popupInit = (connector) => {
   selectorAll('button[id^="comment-"]').forEach((element) => {
@@ -17,11 +17,11 @@ export const popupInit = (connector) => {
 
         const comments = await connector.getComments(idPokemon);
         if (comments.length > 0) {
-          comments.forEach(appendCommentItem);
+          //comments.forEach(appendCommentItem);
         } else {
           selector('.pokemon-comments').innerHTML = 'No comment yet.';
         }
-        appendCountComment();
+        //appendCountComment();
         selector('.popup-modal').classList.remove('popup-hidden');
       } else {
         selector('.pokemon-comments').innerHTML = '';
