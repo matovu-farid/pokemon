@@ -40,6 +40,11 @@ aside {
   margin-right: 3px;
 }
 
+.heart {
+  color: hotpink;
+  cursor: pointer;
+}
+
 .date {
   font-size: smaller;
   color: antiquewhite;
@@ -48,6 +53,12 @@ aside {
 .username {
   color: aquamarine;
   font-weight: bold;
+}
+
+.pokemon-likes {
+  margin-top: 7px;
+  opacity: 0;
+  transition: opacity 500ms;
 }
 
 .popup-hidden {
@@ -262,6 +273,10 @@ form textarea {
   opacity: 1;
 }
 
+#display-items li:hover .pokemon-likes {
+  opacity: 1;
+}
+
 small {
   font-size: small;
 }
@@ -349,9 +364,7 @@ a {
   color: inherit;
 }
 
-#count {
-  color: hotpink;
-}
+
 
 footer {
   text-indent: 20px;
@@ -471,10 +484,7 @@ li {
   display: none;
 }
 
-.heart {
-  color: hotpink;
-  cursor: pointer;
-}
+
 
 .like {
   font-size: 0.8rem;
