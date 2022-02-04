@@ -4,7 +4,12 @@
 
 This is an app that displays pokemons using a remote API.
 
+![screenshot](./assets/pokemon.gif)
+
 ![screenshot](./assets/screen1.png)
+![screenshot](./assets/screen3.png)
+![screenshot](./assets/screen4.png)
+![screenshot](./assets/screen5.png)
 
 This project shows pokemon characters.
 
@@ -19,13 +24,7 @@ This project shows pokemon characters.
 
 This project is deployed on a github page on the link below:
 
-- https://matovu-farid.github.io/pokemon/
-
-## Video Demo
-
-[Video](https://www.loom.com/share/2a3bc2add93044a0bc4735dd45d48b63)
-
-
+- https://jihaneh.github.io/pokemon/
 
 ## Getting Started
 
@@ -34,7 +33,7 @@ This project is deployed on a github page on the link below:
 To get the content of this project locally you need to run this command in your terminal:
 
 ```
-- git clone your https://github.com/matovu-farid/pokemon.git
+- git clone your https://github.com/jihaneH/pokemon.git
 - cd project pokemon
 - npm install
 - npm start
