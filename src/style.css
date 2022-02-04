@@ -38,6 +38,7 @@ main section {
   align-items: center;
   flex-grow: 2;
   box-sizing: border-box;
+  padding: 10px;
 }
 
 #display-items li img {
@@ -57,12 +58,30 @@ main section {
 }
 
 .pokemon-name {
-  color: white;
+  color: #e2d6a8;
   opacity: 0;
   transition: opacity 500ms;
+  font-size: 16px;
+  padding-bottom: 10px;
 }
 
 #display-items li:hover .pokemon-name {
+  opacity: 1;
+}
+
+#display-items button {
+  color: black;
+  opacity: 0;
+  transition: opacity 500ms;
+  font-size: 12px;
+  background-color: #e2d6a8;
+  border-radius: 6px;
+  margin: 10px;
+  padding: 4px;
+  border: none;
+}
+
+#display-items li:hover button {
   opacity: 1;
 }
 
