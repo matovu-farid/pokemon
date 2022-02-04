@@ -34,8 +34,20 @@ main section {
 aside {
   width: 30%;
   box-sizing: border-box;
-  height: 100vh;
-  background-color: antiquewhite;
+  background-color: black;
+  min-width: 300px;
+  height: auto;
+  margin-right: 3px;
+}
+
+.date {
+  font-size: smaller;
+  color: antiquewhite;
+}
+
+.username {
+  color: aquamarine;
+  font-weight: bold;
 }
 
 .popup-hidden {
@@ -98,9 +110,18 @@ aside {
   margin-bottom: 10px;
 }
 
-h4 {
-  margin: 20px 0 10px 0;
+h4,
+h2 {
+  margin: 20px 0 10px 5px;
   text-align: left;
+  font-size: 20px;
+}
+
+.comments-box {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 24%;
 }
 
 .pokemon-comments {
@@ -110,7 +131,6 @@ h4 {
   justify-content: center;
   font-size: 16px;
   background: #302e37;
-  height: 100px;
   overflow: scroll;
 }
 
@@ -265,14 +285,14 @@ form textarea {
   }
 
   .popup-close {
-    right: 120px;
+    right: 160px;
     cursor: pointer;
   }
 
   .popup-modal {
     top: 100px;
-    left: 100px;
-    right: 100px;
+    left: 33%;
+    right: 10%;
     bottom: 100px;
   }
 

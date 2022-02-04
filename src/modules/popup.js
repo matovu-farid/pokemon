@@ -1,6 +1,6 @@
 import { selector, selectorAll } from './tools.js';
-// import { appendCommentItem } from './create_listcomment';
-// import { appendCountComment } from './counter';
+import { appendCommentItem } from './create_listcomment';
+import { appendCountComment } from './counter';
 
 export const popupInit = (connector) => {
   selectorAll('button[id^="comment-"]').forEach((element) => {
@@ -12,6 +12,7 @@ export const popupInit = (connector) => {
         const idPokemon = event.target.id.match(/\d+/g)[0];
         const pokemon = await connector.getPokemonFromId(idPokemon);
         selector('#pokemon_name').innerHTML = pokemon.name;
+        selector('#pokemon_name_title').innerHTML = pokemon.name;
         selector('#pokemon_image').src = pokemon.url;
         selector('#pokemon_height').innerHTML = pokemon.height;
         selector('#pokemon_weight').innerHTML = pokemon.weight;
@@ -19,14 +20,15 @@ export const popupInit = (connector) => {
 
         const comments = await connector.getComments(idPokemon);
         if (comments.length > 0) {
-          // comments.forEach(appendCommentItem);
+          comments.forEach(appendCommentItem);
         } else {
-          // selector('.pokemon-comments').innerHTML = 'No comment yet.';
+          selector('.pokemon-comments').innerHTML = 'No comment yet.';
         }
-        // appendCountComment();
+        selector('#comment-title').innerHTML = 'Comments';
+        appendCountComment();
         selector('.popup-modal').classList.remove('popup-hidden');
       } else {
-        // selector('.pokemon-comments').innerHTML = '';
+        selector('.pokemon-comments').innerHTML = '';
         selector('body').classList.remove('popup-open');
         selector('main').classList.remove('desactivate');
         selector('.popup-modal').classList.add('popup-hidden');
@@ -38,6 +40,10 @@ export const popupInit = (connector) => {
     selector('body').classList.remove('popup-open');
     selector('main').classList.remove('desactivate');
     selector('.popup-modal').classList.add('popup-hidden');
+    selector('#pokemon_name_title').innerHTML = 'Select a pokemon';
+    selector('#comment-title').innerHTML = '';
+    selector('#nb-comments').innerHTML = '';
+    selector('.pokemon-comments').innerHTML = '';
   });
 };
 
