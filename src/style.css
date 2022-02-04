@@ -121,11 +121,22 @@ aside {
   margin-bottom: 10px;
 }
 
-h4,
+h1 {
+  font-size: 24px;
+  color: yellow;
+  text-align: center;
+}
+
 h2 {
   margin: 20px 0 10px 5px;
   text-align: left;
   font-size: 20px;
+}
+
+h4 {
+  margin: 20px 0 10px 5px;
+  text-align: left;
+  font-size: 18px;
 }
 
 .comments-box {

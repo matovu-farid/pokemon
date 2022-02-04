@@ -40,7 +40,7 @@ export const popupInit = (connector) => {
     selector('body').classList.remove('popup-open');
     selector('main').classList.remove('desactivate');
     selector('.popup-modal').classList.add('popup-hidden');
-    selector('#pokemon_name_title').innerHTML = 'Select a pokemon';
+    selector('#pokemon_name_title').innerHTML = '';
     selector('#comment-title').innerHTML = '';
     selector('#nb-comments').innerHTML = '';
     selector('.pokemon-comments').innerHTML = '';
