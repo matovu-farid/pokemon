@@ -6,7 +6,7 @@ This is an app that displays pokemons using a remote API.
 
 ![screenshot](./assets/pokemon.gif)
 
-![<img src="./assets/screen1.png" width="200">](./assets/screen1.png)
+<img src="./assets/screen1.png" width="200">
 ![screenshot](./assets/screen3.png | width=100)
 ![screenshot](./assets/screen4.png =250x250)
 ![screenshot](./assets/screen5.png =x250)
