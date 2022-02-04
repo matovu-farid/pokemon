@@ -48,6 +48,12 @@ function mqHandler(e) {
 const mqLarge = window.matchMedia('(min-width : 1050px)');
 mqLarge.addEventListener('change', mqHandler);
 
+if (mqLarge.matches) {
+  selector('aside section').appendChild(selector('.comments-box'));
+} else {
+  selector('.add-comment-form').appendChild(selector('.comments-box'));
+}
+
 window.onload = function () {
   setTimeout(() => {
     document.body.style.opacity = '100';
