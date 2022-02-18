@@ -24,7 +24,7 @@ This project shows pokemon characters.
 
 This project is deployed on a github page on the link below:
 
-- https://jihaneh.github.io/pokemon/
+- https://jaflih.github.io/pokemon/
 
 ## Getting Started
 
@@ -49,7 +49,7 @@ To get the content of this project locally you need to run this command in your 
 
 👤 **JihaneH**
 
-- GitHub: [@githubhandle](https://github.com/jihaneH)
+- GitHub: [@githubhandle](https://github.com/jaflih)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/jihanne/)
 
 
