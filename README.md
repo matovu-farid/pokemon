@@ -33,7 +33,7 @@ This project is deployed on a github page on the link below:
 To get the content of this project locally you need to run this command in your terminal:
 
 ```
-- git clone your https://github.com/jihaneH/pokemon.git
+- git clone your https://github.com/jaflih/pokemon.git
 - cd project pokemon
 - npm install
 - npm start
@@ -47,10 +47,10 @@ To get the content of this project locally you need to run this command in your 
 
 ## Author
 
-👤 **JihaneH**
+👤 **Jaflih**
 
 - GitHub: [@githubhandle](https://github.com/jaflih)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/jihanne/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/jaflih/)
 
 
 👤 **Matovu Farid Nkoba**
